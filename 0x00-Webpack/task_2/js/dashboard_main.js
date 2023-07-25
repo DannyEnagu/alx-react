@@ -2,7 +2,7 @@ import '../css/main.css';
 const $ = require('jquery');
 const _ = require('lodash');
 
-let counter = 0;
+let count = 0;
 
 $("<div id='logo'> </div>").appendTo('body');
 $("<p>Holberton Dashboard</p>").appendTo('body');
@@ -12,8 +12,8 @@ $("<p id='count'></p>").appendTo('body');
 $("<p>Copyright - Holberton School</p>").appendTo('body');
 
 function updateCounter() {
-  counter++;
-  $('#count').html(`${counter} clicks on the button`);
+  count++;
+  $('#count').html(`${count} clicks on the button`);
 }
 
 $("button").on("click", _.debounce(updateCounter, 500));
