@@ -3,6 +3,8 @@ import './App.css';
 import { getFullYear, getFooterCopy } from './utils';
 
 function App () {
+  const year = getFullYear();
+  const footerCopyTxt = getFooterCopy(true);
   return (
     <div className='App'>
       <div className='App-header'>
@@ -16,22 +18,19 @@ function App () {
         {/* Login Form */}
         <form>
           {/* Email Feild */}
-          <div className='form-group'>
-            <label htmlFor='email'>Email</label>
-            <input type='email' id='email' name='email' />
-          </div>
+          <label htmlFor='email'>Email</label> &nbsp;
+          <input type='email' id='email' name='email' />
+          &nbsp;
           {/* Password Feild */}
-          <div className='form-group'>
-            <label htmlFor='password'>Password</label>
-            <input type='password' id='password' name='password' />
-          </div>
-          <div className='form-group'>
-            <button type='submit' className='btn-login'>OK</button>
-          </div>
+          <label htmlFor='password'>Password</label> &nbsp;
+          <input type='password' id='password' name='password' />
+          {/* Submit Button */}
+          &nbsp;
+          <button type='submit' className='btn-login'>OK</button>
         </form>
       </div>
       <div className='App-footer'>
-        <p>Copyright {getFullYear()} - {getFooterCopy}</p>
+        <p>Copyright {year} - {footerCopyTxt}</p>
       </div>
     </div>
   );
