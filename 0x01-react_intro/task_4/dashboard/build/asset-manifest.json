@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.109b8d6b.css",
+    "main.js": "/static/js/main.6fa95068.js",
+    "static/media/holberton-logo.jpg": "/static/media/holberton-logo.a74edfdfa4e1be32bf0c.jpg",
+    "static/media/close-icon.png": "/static/media/close-icon.a16551183524f3ebcaa9.png",
+    "index.html": "/index.html",
+    "main.109b8d6b.css.map": "/static/css/main.109b8d6b.css.map",
+    "main.6fa95068.js.map": "/static/js/main.6fa95068.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.109b8d6b.css",
+    "static/js/main.6fa95068.js"
+  ]
+}
