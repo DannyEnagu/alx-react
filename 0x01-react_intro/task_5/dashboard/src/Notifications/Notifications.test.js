@@ -2,7 +2,6 @@ import React from 'react';
 import { swallow } from 'enzyme';
 import Notifications from './Notifications';
 
-
 describe('Notification component tests', () => {
   it('Test that Notifications renders without crashing', () => {
     const notifications = swallow(<Notifications />);
