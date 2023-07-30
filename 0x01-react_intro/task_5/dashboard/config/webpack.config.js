@@ -60,7 +60,10 @@ module.exports = {
     publicPath: '/',
   },
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    hot: true,
+    open: true,
+    port: 8564
   },
   module: {
     rules: [
