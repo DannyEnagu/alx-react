@@ -8,11 +8,21 @@ function Login () {
       <form>
         {/* Email Feild */}
         <label htmlFor='email'>Email</label> &nbsp;
-        <input type='email' id='email' name='email' />
+        <input
+          type='email'
+          id='email'
+          name='email'
+          autoComplete='email'
+        />
         &nbsp;
         {/* Password Feild */}
         <label htmlFor='password'>Password</label> &nbsp;
-        <input type='password' id='password' name='password' />
+        <input
+          type='password'
+          id='password'
+          name='password'
+          autoComplete='current-password'
+        />
         {/* Submit Button */}
         &nbsp;
         <button type='submit' className='btn-login'>OK</button>
