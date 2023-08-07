@@ -1,4 +1,4 @@
-import './Login.css';
+import { StyleSheet, css } from 'aphrodite';
 
 function Login () {
   return (
@@ -13,8 +13,8 @@ function Login () {
           id='email'
           name='email'
           autoComplete='email'
+          className={css(styles.formInput)}
         />
-        &nbsp;
         {/* Password Feild */}
         <label htmlFor='password'>Password</label> &nbsp;
         <input
@@ -22,13 +22,20 @@ function Login () {
           id='password'
           name='password'
           autoComplete='current-password'
+          className={css(styles.formInput)}
         />
         {/* Submit Button */}
-        &nbsp;
         <button type='submit' className='btn-login'>OK</button>
       </form>
     </>
   );
 }
+
+// Styles
+const styles = StyleSheet.create({
+  formInput: {
+    marginRight: '1rem'
+  }
+});
 
 export default Login;

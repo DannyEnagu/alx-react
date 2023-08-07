@@ -1,5 +1,4 @@
-import './Header.css';
-
+import { StyleSheet, css } from 'aphrodite';
 import logo from '../assets/holberton-logo.jpg';
 
 function Header () {
@@ -7,7 +6,7 @@ function Header () {
     <>
       <img
         src={logo}
-        className='App-logo'
+        className={css(styles.AppLogo)}
         alt='logo'
       />
       <h1>
@@ -16,5 +15,13 @@ function Header () {
     </>
   );
 }
+
+// styles
+const styles = StyleSheet.create({
+  AppLogo: {
+    height: '40vmin',
+    pointerEvents: 'none'
+  }
+});
 
 export default Header;

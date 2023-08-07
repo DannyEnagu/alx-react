@@ -1,6 +1,6 @@
 import { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
-import './Notifications.css';
+import { StyleSheet, css } from 'aphrodite';
 
 import closeIcon from '../assets/close-icon.png';
 import NotificationItem from './NotificationItem';
@@ -51,7 +51,7 @@ class Notifications extends Component {
           Your notifications
         </div>
         {displayDrawer &&
-          <div className='Notifications'>
+          <div className={css(styles.Notifications)}>
             <button
               onClick={(e) => {
                 console.log('Close button has been clicked');
@@ -92,5 +92,12 @@ Notifications.defaultProps = {
   displayDrawer: false,
   listNotifications: []
 };
+
+const styles = StyleSheet.create({
+  Notifications: {
+    border: '2px dashed #d73953',
+    padding: '1rem'
+  }
+});
 
 export default Notifications;

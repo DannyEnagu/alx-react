@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+import { StyleSheet, css } from 'aphrodite';
 import CourseListRow from './CourseListRow';
 import './CourseList.css';
 
@@ -15,7 +15,7 @@ function CourseList ({ listCourses }) {
   );
 
   return (
-    <table id='CourseList'>
+    <table id='CourseList' className={css(styles.CourseList)}>
       <thead>
         <CourseListRow
           textFirstCell='Available courses'
@@ -28,18 +28,6 @@ function CourseList ({ listCourses }) {
         />
       </thead>
       <tbody>
-        {/* <CourseListRow
-          textFirstCell='ES6'
-          textSecondCell='60'
-        />
-        <CourseListRow
-          textFirstCell='Webpack'
-          textSecondCell='20'
-        />
-        <CourseListRow
-          textFirstCell='React'
-          textSecondCell='40'
-        /> */}
         {listCourses.length > 0
           ? courses
           : <tr>No course available yet</tr>}
@@ -57,5 +45,13 @@ CourseList.propTypes = {
 CourseList.defaultProps = {
   listCourses: []
 };
+
+// Styles
+const styles = StyleSheet.create({
+  CourseList: {
+    width: '100%',
+    border: '1px solid gray'
+  }
+});
 
 export default CourseList;

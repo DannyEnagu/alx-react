@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import './App.css';
+import { StyleSheet, css } from 'aphrodite';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Login from '../Login/Login';
@@ -59,14 +59,14 @@ class App extends Component {
 
     return (
       <>
-        <div className='root-notifications'>
+        <div className={css(styles.rootNotifications)}>
           <Notifications listNotifications={listNotifications} />
         </div>
         <div className='App'>
-          <div className='App-header'>
+          <div className={css(styles.AppHeader)}>
             <Header />
           </div>
-          <div className='App-body'>
+          <div className={css(styles.AppBody)}>
             {this.props.isLoggedIn
               ? <BodySectionWithMarginBottom title='Course list'><CourseList listCourses={listCourses} /></BodySectionWithMarginBottom>
               : <BodySectionWithMarginBottom title='Log in to continue'><Login /></BodySectionWithMarginBottom>}
@@ -74,7 +74,7 @@ class App extends Component {
               <p>Hello School</p>
             </BodySection>
           </div>
-          <div className='App-footer'>
+          <div className={css(styles.AppFooter)}>
             <Footer />
           </div>
         </div>
@@ -94,5 +94,32 @@ App.defaultProps = {
   isLoggedIn: false,
   logOut: () => {}
 };
+
+// Styles
+const styles = StyleSheet.create({
+  rootNotifications: {
+    position: 'absolute',
+    right: '2rem'
+  },
+
+  AppHeader: {
+    display: 'flex',
+    color: '#d73953',
+    borderBottom: '2px solid #d73953',
+    alignItems: 'center',
+    fontSize: 'larger',
+    fontWeight: 'bolder'
+  },
+
+  AppBody: {
+    padding: '1rem'
+  },
+
+  AppFooter: {
+    borderTop: '2px solid #d73953',
+    padding: '1rem',
+    textAlign: 'center'
+  }
+});
 
 export default App;
