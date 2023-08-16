@@ -3,6 +3,7 @@
 const { fromJS } = require('immutable');
 
 // Expect and convert row JS objects to immutable Map
-export function getImmutableObject(object) {
-  return fromJS(object);
+export default function getImmutableObject(object) {
+  const map = fromJS(object);
+  return map;
 }
