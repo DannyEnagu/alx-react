@@ -1,9 +1,5 @@
-#!/usr/bin/node
+import { fromJS } from 'immutable';
 
-const { fromJS } = require('immutable');
-
-// Expect and convert row JS objects to immutable Map
 export default function getImmutableObject(object) {
-  const map = fromJS(object);
-  return map;
+  return fromJS(object);
 }
