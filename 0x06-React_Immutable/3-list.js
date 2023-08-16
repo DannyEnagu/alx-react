@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 import { List } from 'immutable';
 
 export function getListObject(array) {

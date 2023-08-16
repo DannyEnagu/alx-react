@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 import { fromJS } from 'immutable';
 
 // Accessing nested elements

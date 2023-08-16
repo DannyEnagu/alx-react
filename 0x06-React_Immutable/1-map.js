@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 import { Map } from 'immutable';
 
 // Expect and convert row JS objects to immutable Map
