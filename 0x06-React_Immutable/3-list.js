@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const { List } = require('immutable');
+import { List } from 'immutable';
 
 export function getListObject(array) {
   const list = List(array);

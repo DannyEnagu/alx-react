@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const { fromJS } = require('immutable');
+import { fromJS } from 'immutable';
 
 // Accessing nested elements
 export default function accessImmutableObject(object, array) {
