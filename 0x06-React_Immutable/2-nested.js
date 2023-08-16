@@ -1,7 +1,7 @@
-const { fromJS } = require('immutable');
+const { Map } = require('immutable');
 
 // Accessing nested elements
 export default function accessImmutableObject (object, array) {
-  const nested = fromJS(object);
+  const nested = Map(object);
   return nested.getIn(array);
 }
