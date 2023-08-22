@@ -20,6 +20,7 @@ export default function getAllNotificationsByUser (userId) {
         filteredData.push(item.context);
       }
     });
+  return filteredData;
 }
 
 export { normalizedData };

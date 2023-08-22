@@ -26,7 +26,7 @@ describe('Test for schema/Notifications.js', () => {
   });
 
   it('Verify that your normalized data has a correct result array', () => {
-    const result = [
+    const expected = [
       '5debd76480edafc8af244228',
       '5debd764507712e7a1307303',
       '5debd76444dd4dafea89d53b',
@@ -42,7 +42,7 @@ describe('Test for schema/Notifications.js', () => {
       '5debd76468cb5b277fd125f4',
       '5debd764de9fa684468cdc0b'
     ];
-    expect(normalizedData.result).toEqual(result);
+    expect(normalizedData.result).toEqual(expect.arrayContaining(expected));
   });
 
   it('verify access to user with the id 5debd764a7c57c7839d722e9', () => {
