@@ -6,10 +6,10 @@ import {
 
 const initialState = [];
 
-export default function courseReducer (state = initialState, actions) {
+export default function courseReducer (state = initialState, actions = { type: null }) {
   switch (actions.type) {
     case FETCH_COURSE_SUCCESS:
-      return state.map((course) => ({ ...course, isSelected: false }));
+      return actions.data.map((course) => ({ ...course, isSelected: false }));
 
     case SELECT_COURSE: {
       return state.map(course => {

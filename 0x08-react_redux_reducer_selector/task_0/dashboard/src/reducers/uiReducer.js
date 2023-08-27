@@ -12,7 +12,7 @@ export const intialSate = {
   user: {}
 };
 
-export default function uiReducer (state = intialSate, action) {
+export default function uiReducer (state = intialSate, action = { type: null }) {
   switch (action.type) {
     case DISPLAY_NOTIFICATION_DRAWER: {
       return {
