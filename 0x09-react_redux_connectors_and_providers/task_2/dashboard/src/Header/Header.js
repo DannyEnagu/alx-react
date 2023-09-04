@@ -18,7 +18,9 @@ function Header ({ user, logOut }) {
       </h1>
       {user.isLoggedIn &&
         <section id='logoutSection'>
-          <h2>Welcome<strong> {user.email} </strong><em><a href='#' onClick={logOut}>(logout)</a></em>
+          <h2>
+            Welcome<strong> {user.email} </strong>
+            <em><a href='#' onClick={() => logOut}>(logout)</a></em>
           </h2>
         </section>}
     </>
